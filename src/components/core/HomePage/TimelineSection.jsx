@@ -105,8 +105,6 @@ const TimelineSection = () => {
 
                 </div>
 
-
-                {/* Image + Stats */}
                 <div className="
                     relative
                     w-full
@@ -194,7 +192,7 @@ const TimelineSection = () => {
                                 sm:text-3xl
                                 font-bold
                             ">
-                                250
+                                90+
                             </h1>
 
                             <p className="

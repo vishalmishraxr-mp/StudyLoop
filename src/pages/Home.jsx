@@ -155,23 +155,23 @@ const Home = () => {
             <div className="homepage_bg h-[300px] sm:h-[320px] md:h-[300px]">
                 <div className="w-11/12 max-w-maxContent mx-auto flex flex-col items-center gap-5">
 
-                    <div className="h-[80px] sm:h-[100px]"></div>
+                <div className="h-[80px] sm:h-[100px]"></div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 items-center text-white ml-[50px]">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 items-center justify-center text-white">
 
-                        <CTAButton active={true} linkto={"/signup"}>
-                            <div className="flex items-center gap-2">
-                                <span>Explore Full Catalog</span>
-                                <FaArrowRightLong />
-                            </div>
-                        </CTAButton>
+                    <CTAButton active={true} linkto={"/signup"}>
+                        <div className="flex items-center gap-2">
+                            <span>Explore Full Catalog</span>
+                            <FaArrowRightLong />
+                        </div>
+                    </CTAButton>
 
-                        <CTAButton active={false} linkto={"/signup"}>
-                            <div>Learn More</div>
-                        </CTAButton>
+                    <CTAButton active={false} linkto={"/signup"}>
+                        <div>Learn More</div>
+                    </CTAButton>
 
-                    </div>
                 </div>
+            </div>
             </div>
 
 
@@ -346,10 +346,9 @@ const Home = () => {
                 items-center justify-between 
                 gap-10 md:gap-12">
 
-    {/* Image */}
+
     <div className="w-full md:w-1/2 flex justify-center relative mt-12 md:mt-[100px]">
 
-        {/* White background behind image */}
         <div className="absolute 
                         w-full h-[320px] sm:h-[380px] md:h-[450px]
                         bg-white 
