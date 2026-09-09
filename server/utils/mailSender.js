@@ -8,7 +8,7 @@ const mailSender = async (email, title, body) => {
         console.log("Sending email to:", email);
 
         const { data, error } = await resend.emails.send({
-            from: "onboarding@resend.dev",
+            from: "sakshi.shukl178@gmail.com",
             to: email,
             subject: title,
             html: body,
