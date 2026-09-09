@@ -38,10 +38,13 @@ export async function buyCourse(
   const toastId = toast.loading("Loading...");
 
   try {
-    // Load Razorpay SDK
-    const res = await loadScript(
-      "https://checkout.razorpay.com/v1/checkout.js"
-    );
+    // Check if Razorpay SDK is already loaded
+    let res = true;
+    if (!window.Razorpay) {
+      res = await loadScript(
+        "https://checkout.razorpay.com/v1/checkout.js"
+      );
+    }
 
     if (!res) {
       toast.dismiss(toastId);

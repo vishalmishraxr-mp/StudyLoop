@@ -217,9 +217,6 @@ import axios from 'axios';
 
 
 const Signup = () => {
-    console.log("ENV:", import.meta.env);
-console.log("BASE URL:", import.meta.env.VITE_BASE_URL);
-
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
 
@@ -298,10 +295,11 @@ console.log("BASE URL:", import.meta.env.VITE_BASE_URL);
 
             console.error("SEND OTP ERROR:", error);
 
-            alert(
-                error.response?.data?.message ||
-                "Failed to send OTP"
-            );
+            const serverError = error.response?.data?.error
+                ? `${error.response.data.message}: ${error.response.data.error}`
+                : error.response?.data?.message;
+
+            alert(serverError || "Failed to send OTP. Please try again later.");
 
         } finally {
 
